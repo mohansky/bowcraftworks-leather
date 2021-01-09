@@ -1,0 +1,33 @@
+header {
+  position: fixed;
+  z-index: 10;
+  height: 50px;
+  width: 100%;
+  background-color: $green;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  
+  span {
+    font-size: $ms-size;
+
+    @media screen and (max-width:630px) {
+      font-size: $sm-size;
+    }
+
+    @media screen and (max-width:480px) {
+      font-size: $s-size;
+    }
+
+  }
+
+  .email-link{
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .email-link:hover{
+    color: rgba($color: #ffffff, $alpha: 0.5)
+  }
+}

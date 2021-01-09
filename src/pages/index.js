@@ -58,11 +58,11 @@ return (
           <div className="parallax">     
             <SignupForm/>
           </div>
-
+  {/*
           <section className="container">
             <Instagram />
           </section>
-  
+  */}
           <Footer />
   </Layout>
   )

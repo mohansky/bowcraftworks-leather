@@ -37,7 +37,8 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `17674031968`, // Your Instagram
+        username: `bow.craftworks`, 
+        userId: `17674031968`, // Your Instagram
       },
     },
     {

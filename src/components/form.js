@@ -11,18 +11,27 @@ const initialValues= {
   message: '',
 }
 
-const onSubmit= values =>   {
-  console.log('Form data', values)
-}
+const onSubmit= (values, actions) => {        
+    fetch("/", {          
+      method: "POST",          
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },          
+      body: encode({ "form-name": "contact", ...values })        
+    })        
+    .then(() => { 
+      alert('Success');          
+      actions.resetForm()        
+      })        
+      .catch(() => {          
+      alert('Error');        
+      })        
+      .finally(() => actions.setSubmitting(false))      
+    }    
 
 const validationSchema = Yup.object({
     name: Yup.string().required('Required'),
     email: Yup.string().email('Invalid email address').required('Required'),
     message: Yup.string().required('Required'),
       });
-
-
-//console.log('Form data', formik.values )
 
 
 function SignupForm () {

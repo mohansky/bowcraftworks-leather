@@ -2,12 +2,12 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import Instagram from '../components/instagram'
+import Img from 'gatsby-image' 
 import Footer from '../components/footer'
 import Bcwlogo from "../components/bcwlogo"
 import {Animated} from "react-animated-css"
 import SignupForm from '../components/form'
+import Instagram from '../components/instagram'
 
 const IndexPage = ({data}) => {
 
@@ -58,11 +58,21 @@ return (
           <div className="parallax">     
             <SignupForm/>
           </div>
-  {/*
+
+
           <section className="container">
+           
+            <h2>INSTAGRAM</h2>
+              <span>
+                  <a className="insta-link" href="https://www.instagram.com/bow.craftworks/?hl=en" target="_blank" rel="noopener noreferrer"> 
+                  @bow.craftworks
+                  </a>
+              </span>
+
             <Instagram />
           </section>
-  */}
+  
+    
           <Footer />
   </Layout>
   )

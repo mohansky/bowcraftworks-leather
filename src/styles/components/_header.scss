@@ -14,11 +14,11 @@ header {
     font-size: $ms-size;
 
     @media screen and (max-width:630px) {
-      font-size: $sm-size;
+      font-size: $m-size;
     }
 
     @media screen and (max-width:480px) {
-      font-size: $s-size;
+      font-size: $sm-size;
     }
 
   }

@@ -11,6 +11,15 @@ const initialValues= {
   message: '',
 }
 
+
+
+/* const onSubmit = values => console.log('Form data', values) */
+const encode = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 const onSubmit= (values, actions) => {        
     fetch("/", {          
       method: "POST",          
@@ -27,11 +36,14 @@ const onSubmit= (values, actions) => {
       .finally(() => actions.setSubmitting(false))      
     }    
 
+
 const validationSchema = Yup.object({
     name: Yup.string().required('Required'),
     email: Yup.string().email('Invalid email address').required('Required'),
     message: Yup.string().required('Required'),
       });
+
+
 
 
 function SignupForm () {
@@ -40,7 +52,9 @@ return (
   <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
-      onSubmit={onSubmit}>
+      onSubmit={onSubmit}
+      data-netlify={true} 
+      >
      <Form>
         <h2>Get in touch</h2>
 

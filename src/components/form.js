@@ -27,7 +27,7 @@ const onSubmit= (values, actions) => {
       body: encode({ "form-name": "contact", ...values })        
     })        
     .then(() => { 
-      alert('Success');          
+      alert('Thank you for your message. We will get back to you.');          
       actions.resetForm()        
       })        
       .catch(() => {          

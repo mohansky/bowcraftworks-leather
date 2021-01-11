@@ -55,7 +55,7 @@ return (
       onSubmit={onSubmit}
       
       >
-     <Form data-netlify={true} >
+     <Form data-netlify="true" name="contact" method="post" >
         <h2>Get in touch</h2>
 
 

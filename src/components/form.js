@@ -53,9 +53,9 @@ return (
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
-      data-netlify={true} 
+      
       >
-     <Form>
+     <Form data-netlify={true} >
         <h2>Get in touch</h2>
 
 
